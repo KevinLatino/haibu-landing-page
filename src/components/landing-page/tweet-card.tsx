@@ -5,7 +5,7 @@ import { BadgeCheck } from "lucide-react";
 import X from "../../../public/icons/x.svg";
 import Image from "next/image";
 
-export default function Component() {
+export default function TwitterCard() {
 
     const handleURL = (): void => {
         window.open(
