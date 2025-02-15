@@ -3,7 +3,7 @@ import { Marquee } from "@/components/magicui/marquee";
 import { MarqueeInterface, ImgMarquee } from "@/types/landing-page/user-opinions";
 
 
-const reviews: MarqueeInterface[] = [
+const mockedReviews: MarqueeInterface[] = [
   {
     name: "Santiago Marín",
     body: "Esta app me ayudó a organizarme y mejorar mis notas. ¡Es increíble",
@@ -46,8 +46,8 @@ const reviews: MarqueeInterface[] = [
   }
 ];
 
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
+const firstRow = mockedReviews.slice(0, mockedReviews.length / 2);
+const secondRow = mockedReviews.slice(mockedReviews.length / 2);
 
 const ReviewCard = ({
   img,

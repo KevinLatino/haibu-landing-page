@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { Item } from "@/types";
 import NotificationCard from "@/components/landing-page/NotificationCard";
+import { MarqueeDemo } from "@/components/landing-page/user-opinions";
 
 
 const notifications: Item[] = [
@@ -67,9 +68,15 @@ export default function LandingPage() {
                         </Iphone15Pro>
                     </div>
                 </section>
-            </main>
 
-            
+                <section className="mt-[8rem]">
+                    <h2 className="text-3xl text-center font-medium">
+                        <strong className="text-haibu_purple">Take a look</strong> to lastest Haibu's Comunnity {" "}
+                        <strong className="text-haibu_purple">Hais (posts)</strong>.
+                    </h2>
+                    <MarqueeDemo />
+                </section>
+            </main>
         </>
     )
 }
