@@ -1,101 +1,75 @@
-import Image from "next/image";
+"use client"
+import Iphone15Pro from "@/components/landing-page/Iphone15Mock";
+import { AnimatedList } from "@/components/magicui/animated-list";
+import Link from "next/link";
+import { ShimmerButton } from "@/components/magicui/shimmer-button";
+import { Item } from "@/types";
+import NotificationCard from "@/components/landing-page/NotificationCard";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+const notifications: Item[] = [
+    {
+        title: "Secure with Chopin",
+        description: "Advanced security to protect your privacy.",
+        icon: "🔒",
+        color: "#FF3D71",
+    },
+    {
+        title: "Open & Community Driven",
+        description: "Built for transparency and collaboration.",
+        icon: "🌟",
+        color: "#1E86FF",
+    },
+    {
+        title: "Hai Token Governance",
+        description: "Use Hai tokens to shape Haibu's future.",
+        icon: "🐝",
+        color: "#FFB800",
+    },
+    {
+        title: "Powered by Celestia",
+        description: "Leveraging Celestia's modularity.",
+        icon: "🌌",
+        color: "#00C9A7",
+    },
+];
+
+
+export default function LandingPage() {
+    return (
+        <>
+            <main className="flex flex-col justify-center items-center">
+                <section className="flex min-h-3/4 flex-col items-center md:items-stretch md:flex-row w-full mt-[0] md:mt-[4rem] justify-evenly">
+                    <div className="flex w-full md:w-[40%] flex-col gap-7 md:mt-20 mt-0 md:h-auto h-[300px]">
+                        <h1 className="text-strong-blue font-medium text-3xl text-center">
+                            Welcome to <strong className="text-haibu_purple">Haibu</strong>, the future of
+                            social media: <strong className="text-haibu_purple">secure</strong>,
+                            <strong className="text-haibu_purple"> decentralized</strong>, and <strong className="text-haibu_purple">user-governed</strong>!
+                        </h1>
+
+                        <div className="flex items-center justify-center">
+                            <Link href="/register">
+                                <ShimmerButton className="shadow-2xl">
+                                    <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                                        Join Haibu and shape the future!
+                                    </span>
+                                </ShimmerButton>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="flex w-full md:w-[40%] mt-[-80px] flex-col gap-5">
+                        <Iphone15Pro>
+                            <AnimatedList delay={1000}>
+                                {notifications.map((notification) => (
+                                    <NotificationCard key={notification.title} {...notification} />
+                                ))}
+                            </AnimatedList>
+                        </Iphone15Pro>
+                    </div>
+                </section>
+            </main>
+
+            
+        </>
+    )
 }
