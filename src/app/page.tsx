@@ -75,7 +75,10 @@ export default function LandingPage() {
                         <strong className="text-haibu-purple">Take a look</strong> to lastest Haibu's Comunnity {" "}
                         <strong className="text-haibu-purple">Hais (posts)</strong>.
                     </h2>
-                    <MarqueeDemo />
+                    <article className="overflow-x-hidden">
+                        <MarqueeDemo />
+                    </article>
+
                 </section>
 
                 <section className="flex flex-col gap-8 items-center mt-[4rem]">

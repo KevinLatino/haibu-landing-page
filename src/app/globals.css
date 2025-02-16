@@ -8,3 +8,8 @@
     --radius: 0.5rem;
   }
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
