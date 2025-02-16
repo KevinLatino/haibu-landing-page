@@ -65,8 +65,8 @@ const LandingNavbar = () => {
                     {navItems.map(({ title, url }) => (
                         <li key={title}>
                             <Link
-                                className={`relative hover:text-haibu_purple block px-2 py-2 transition-colors duration-300 ${
-                                    activeSection === url.slice(1) ? "text-haibu_purple" : "text-gray-600"
+                                className={`relative hover:text-haibu-purple block px-2 py-2 transition-colors duration-300 ${
+                                    activeSection === url.slice(1) ? "text-haibu-purple" : "text-gray-600"
                                 }`}
                                 href={url}
                             >

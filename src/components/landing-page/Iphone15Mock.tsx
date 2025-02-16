@@ -10,7 +10,7 @@ export default function Iphone15pro({ children }: IphoneProps) {
 
       <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-[100px] h-[28px] bg-black rounded-[20px] shadow-md"></div>
 
-      <header className="absolute top-[4.5rem] left-1/2 transform -translate-x-1/2 text-haibu_purple text-5xl font-bold">
+      <header className="absolute top-[4.5rem] left-1/2 transform -translate-x-1/2 text-haibu-purple text-5xl font-bold">
         20:23
       </header>
 
