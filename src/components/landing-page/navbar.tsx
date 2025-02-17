@@ -8,7 +8,7 @@ import { NavItem } from "@/types/landing-page/navbar";
 
 
 const navItems: NavItem[] = [
-    { title: "Homee", url: "/#modules" },
+    { title: "Home", url: "/#modules" },
     { title: "Features", url: "/#opinions" },
     { title: "Events", url: "/#events" },
     { title: "Documentation", url: "/#docs" },
