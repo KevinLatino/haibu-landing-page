@@ -5,12 +5,10 @@ import Link from "next/link";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { Item } from "@/types";
 import NotificationCard from "@/components/landing-page/NotificationCard";
-import { MarqueeDemo } from "@/components/landing-page/user-opinions";
-import TwitterCard from "@/components/landing-page/tweet-card";
-import { HaibuContribution } from "@/components/landing-page/terminal";
-import TiltedCard from "@/components/TiltedCard/TiltedCard";
-import { motion } from "framer-motion";
-import { PixelCard } from "@/components/ui/pixelcard";
+import TokenSection from "@/sections/TokenSection";
+import ContributeSection from "@/sections/ContributeSection";
+import CommunitySection from "@/sections/CommunitySection";
+import ChopinSection from "@/sections/ChopinFramework";
 
 const notifications: Item[] = [
     {
@@ -38,21 +36,6 @@ const notifications: Item[] = [
         color: "#00C9A7",
     },
 ];
-
-  
-  function CommunitySection() {
-    return (
-        <section className="mt-[8rem]">
-            <h2 className="text-2xl md:text-3xl text-center font-medium">
-                <strong className="text-haibu-purple">Take a look</strong> to lastest Haibu's Comunnity{" "}
-                <strong className="text-haibu-purple">Hais (posts)</strong>.
-            </h2>
-            <article className="overflow-x-hidden">
-                <MarqueeDemo />
-            </article>
-        </section>
-    )
-  }
   
 
   export default function LandingPage() {
@@ -88,7 +71,7 @@ const notifications: Item[] = [
                 </section>
 
                 <TokenSection />
-                <DeveloperSection />
+                <ContributeSection />
                 <ChopinSection />
                 <CommunitySection />
             </main>
