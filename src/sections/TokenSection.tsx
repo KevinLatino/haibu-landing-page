@@ -8,7 +8,7 @@ export default function TokenSection() {
                 Discover our token <strong className="text-light-yellow">Hai</strong> and what it's{" "}
                 <strong className="text-haibu-purple"> mission</strong>
             </h2>
-  
+
             <div className="flex flex-col md:flex-row justify-center items-center  md:gap-[10rem] mt-[3rem]">
                 <ul className="text-[1.08rem] w-full md:w-[72%] flex-wrap font-raleway flex flex-col gap-6 justify-center">
                     <li className="flex text-[1.5rem] items-center w-full gap-4">
@@ -40,10 +40,10 @@ export default function TokenSection() {
                         </p>
                     </li>
                 </ul>
-  
+
                 <div className="w-full md:w-[50%] flex flex-col justify-center items-center">
+                    <h2 className="text-xl text-[#F6850A] font-[900] mb-6">Click the Coin to Win Hai Tokens</h2>
                     <PixelCard>
-                        <h2 className="text-xl text-[#F6850A] font-[900]">Click the Hai Token to go to our Clicks Campaign!</h2>
                         <TiltedCard
                             imageSrc="/haibu-logos/HaiToken.svg"
                             containerHeight="320px"
@@ -64,4 +64,4 @@ export default function TokenSection() {
             </div>
         </section>
     )
-  }
+}
