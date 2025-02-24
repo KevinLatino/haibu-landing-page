@@ -1,4 +1,5 @@
-"use client"
+"use client";
+import { motion } from "framer-motion";
 import Iphone15Pro from "@/components/landing-page/Iphone15Mock";
 import { AnimatedList } from "@/components/magicui/animated-list";
 import Link from "next/link";
@@ -9,6 +10,7 @@ import TokenSection from "@/sections/TokenSection";
 import ContributeSection from "@/sections/ContributeSection";
 import CommunitySection from "@/sections/CommunitySection";
 import ChopinSection from "@/sections/ChopinFramework";
+import { fastFadeInRight, fastFadeInLeft, fadeInUp } from "@/animations/variants";
 
 const notifications: Item[] = [
     {
@@ -36,20 +38,37 @@ const notifications: Item[] = [
         color: "#00C9A7",
     },
 ];
-  
 
-  export default function LandingPage() {
+export default function LandingPage() {
     return (
         <>
-            <main className="flex flex-col justify-center items-center">
-                <section className="flex min-h-3/4 flex-col items-center md:items-stretch md:flex-row w-full mt-[0] md:mt-[4rem] justify-evenly">
-                    <div className="flex w-full md:w-[40%] flex-col gap-7 md:mt-20 mt-0 md:h-auto h-[300px]">
-                        <h1 className="text-strong-blue font-medium text-3xl text-center">
+            <main className="flex flex-col justify-center items-center min-h-screen">
+
+                <motion.section 
+                    className="flex flex-col md:flex-row items-center justify-center w-full text-center md:text-left gap-5"
+                    initial="hidden"
+                    animate="visible"
+                >
+
+                    <motion.div 
+                        className="flex w-full md:w-[40%] flex-col justify-center items-center gap-5 mb-[10rem] ml-[4rem]"
+                        variants={fastFadeInLeft}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{ delay: 0.2 }}
+                    >
+                        <h1 className="text-strong-blue font-medium text-3xl">
                             Welcome to <strong className="text-haibu-purple">Haibu</strong>, the future of
                             social media: <strong className="text-haibu-purple">secure</strong>,
                             <strong className="text-haibu-purple"> decentralized</strong>, and <strong className="text-haibu-purple">user-governed</strong>!
                         </h1>
-                        <div className="flex items-center justify-center">
+                        
+                        <motion.div
+                            variants={fadeInUp}
+                            initial="hidden"
+                            animate="visible"
+                            transition={{ delay: 0.5 }}
+                        >
                             <Link href="/register">
                                 <ShimmerButton className="shadow-2xl">
                                     <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
@@ -57,9 +76,16 @@ const notifications: Item[] = [
                                     </span>
                                 </ShimmerButton>
                             </Link>
-                        </div>
-                    </div>
-                    <div className="flex w-full md:w-[40%] mt-[-80px] flex-col gap-5">
+                        </motion.div>
+                    </motion.div>
+
+                    <motion.section 
+                        className="flex w-full md:w-[40%] justify-center"
+                        variants={fastFadeInRight}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{ delay: 0.4 }}
+                    >
                         <Iphone15Pro>
                             <AnimatedList delay={1000}>
                                 {notifications.map((notification) => (
@@ -67,13 +93,16 @@ const notifications: Item[] = [
                                 ))}
                             </AnimatedList>
                         </Iphone15Pro>
-                    </div>
-                </section>
+                    </motion.section>
+                </motion.section>
 
-                <TokenSection />
-                <ContributeSection />
-                <ChopinSection />
-                <CommunitySection />
+                    <TokenSection />
+
+                    <ContributeSection />
+
+                    <ChopinSection />
+
+                    <CommunitySection />
             </main>
         </>
     );

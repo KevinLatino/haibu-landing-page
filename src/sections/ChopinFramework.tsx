@@ -1,4 +1,7 @@
-import TwitterCard from "@/components/landing-page/tweet-card"
+"use client";
+import { motion } from "framer-motion";
+import TwitterCard from "@/components/landing-page/tweet-card";
+import { fastFadeInLeft, fastFadeInRight } from "@/animations/variants";
 
 export default function ChopinSection() {
     return (
@@ -8,7 +11,14 @@ export default function ChopinSection() {
                 <strong className="text-haibu-purple">Chopin Framework</strong>?
             </h2>
             <article className="w-full flex flex-col md:flex-row justify-evenly items-center">
-                <div className="w-full md:w-[60%] flex justify-center">
+
+                <motion.div
+                    className="w-full md:w-[60%] flex justify-center"
+                    variants={fastFadeInLeft}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }} 
+                >
                     <ul className="text-[1.08rem] flex-wrap font-raleway w-[90%] h-full flex flex-col gap-6 justify-center">
                         <li className="flex text-[1.5rem] gap-4">
                             <p>
@@ -46,11 +56,18 @@ export default function ChopinSection() {
                             <p>Eliminates centralized authentication risks, making Haibu a safer and more resilient platform.</p>
                         </li>
                     </ul>
-                </div>
-                <div className="w-full md:w-[60%] flex justify-center mt-8 md:mt-0">
+                </motion.div>
+
+                <motion.div
+                    className="w-full md:w-[50%] flex justify-center mt-8 md:mt-0"
+                    variants={fastFadeInRight}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                >
                     <TwitterCard />
-                </div>
+                </motion.div>
             </article>
         </section>
-    )
-  }
+    );
+}
