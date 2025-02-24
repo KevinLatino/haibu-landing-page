@@ -10,8 +10,10 @@ import TokenSection from "@/sections/TokenSection";
 import ContributeSection from "@/sections/ContributeSection";
 import CommunitySection from "@/sections/CommunitySection";
 import ChopinSection from "@/sections/ChopinFramework";
+import SocialMediaSection from "@/sections/SocialMediaSection";
 import { fastFadeInRight, fastFadeInLeft, fadeInUp } from "@/animations/variants";
 import { InfiniteBeeAllFrames } from "@/components/landing-page/infinite-bee-all-frames"
+
 
 const notifications: Item[] = [
     {
@@ -105,6 +107,8 @@ export default function LandingPage() {
                     <ContributeSection />
 
                     <ChopinSection />
+                    
+                    <SocialMediaSection />
 
                     <CommunitySection />
             </main>
