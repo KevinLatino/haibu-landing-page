@@ -1,16 +1,26 @@
-import { PixelCard } from "@/components/ui/pixelcard"
-import TiltedCard from "@/components/TiltedCard/TiltedCard"
+"use client";
+import { motion } from "framer-motion";
+import { PixelCard } from "@/components/ui/pixelcard";
+import TiltedCard from "@/components/TiltedCard/TiltedCard";
+import { fastFadeInLeft, fastFadeInRight } from "@/animations/variants";
 
 export default function TokenSection() {
     return (
         <section className="mt-[6rem] p-4 md:p-[8rem]">
             <h2 className="text-2xl md:text-3xl text-center font-medium">
-                Discover our token <strong className="text-light-yellow">Hai</strong> and what it's{" "}
-                <strong className="text-haibu-purple"> mission</strong>
+                Discover our token <strong className="text-light-yellow">Hai</strong> and what its{" "}
+                <strong className="text-haibu-purple">mission</strong> is.
             </h2>
 
-            <div className="flex flex-col md:flex-row justify-center items-center  md:gap-[10rem] mt-[3rem]">
-                <ul className="text-[1.08rem] w-full md:w-[72%] flex-wrap font-raleway flex flex-col gap-6 justify-center">
+            <div className="flex flex-col md:flex-row justify-center items-center md:gap-[10rem] mt-[3rem]">
+
+                <motion.ul
+                    className="text-[1.08rem] w-full md:w-[72%] flex-wrap font-raleway flex flex-col gap-6 justify-center"
+                    variants={fastFadeInLeft}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                >
                     <li className="flex text-[1.5rem] items-center w-full gap-4">
                         <p>
                             <strong className="text-stellar-blue">What is Hai Token?</strong>
@@ -39,9 +49,15 @@ export default function TokenSection() {
                             Hai is distributed monthly based on user likes and activity. The more engaged you are, the more you earn!
                         </p>
                     </li>
-                </ul>
+                </motion.ul>
 
-                <div className="w-full md:w-[50%] flex flex-col justify-center items-center">
+                <motion.div
+                    className="w-full md:w-[50%] flex flex-col justify-center items-center"
+                    variants={fastFadeInRight}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                >
                     <h2 className="text-xl text-[#F6850A] font-[900] mb-6">Click the Coin to Win Hai Tokens</h2>
                     <PixelCard>
                         <TiltedCard
@@ -60,8 +76,8 @@ export default function TokenSection() {
                             }
                         />
                     </PixelCard>
-                </div>
+                </motion.div>
             </div>
         </section>
-    )
+    );
 }
