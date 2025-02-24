@@ -60,7 +60,7 @@ export default function LandingPage() {
                         animate="visible"
                         transition={{ delay: 0.2 }}
                     >
-                        <h1 className="text-strong-blue font-medium text-3xl">
+                        <h1 className="text-strong-blue text-center font-medium text-3xl max-w-[50rem]">
                             Welcome to <strong className="text-haibu-purple">Haibu</strong>, the future of
                             social media: <strong className="text-haibu-purple">secure</strong>,
                             <strong className="text-haibu-purple"> decentralized</strong>, and <strong className="text-haibu-purple">user-governed</strong>!
@@ -80,9 +80,6 @@ export default function LandingPage() {
                                 </ShimmerButton>
                             </Link>
                         </motion.div>
-                        <div className="flex justify-center relative">
-                            <InfiniteBeeAllFrames width={400} height={300} className="mt-[-2rem] px-10 z-10" />
-                        </div>
                     </motion.div>
 
                     <motion.section 
