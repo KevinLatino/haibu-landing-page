@@ -11,6 +11,7 @@ import ContributeSection from "@/sections/ContributeSection";
 import CommunitySection from "@/sections/CommunitySection";
 import ChopinSection from "@/sections/ChopinFramework";
 import { fastFadeInRight, fastFadeInLeft, fadeInUp } from "@/animations/variants";
+import { InfiniteBeeAllFrames } from "@/components/landing-page/infinite-bee-all-frames"
 
 const notifications: Item[] = [
     {
@@ -77,6 +78,9 @@ export default function LandingPage() {
                                 </ShimmerButton>
                             </Link>
                         </motion.div>
+                        <div className="flex justify-center relative">
+                            <InfiniteBeeAllFrames width={400} height={300} className="mt-[-2rem] px-10 z-10" />
+                        </div>
                     </motion.div>
 
                     <motion.section 

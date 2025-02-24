@@ -1,4 +1,5 @@
 import { HaibuContribution } from "@/components/landing-page/terminal"
+import { InfiniteBeeAllFrames } from "@/components/landing-page/infinite-bee-all-frames"
 
 export default function ContributeSection() {
     return (
@@ -50,8 +51,13 @@ export default function ContributeSection() {
                         </li>
                     </ul>
                 </div>
-                <div className="w-full md:w-[60%]">
-                    <HaibuContribution />
+                <div className="w-full md:w-[60%] relative">
+                    <div className="absolute top-0 right-0 mt-1 px-15 z-10">
+                        <InfiniteBeeAllFrames width={200} height={100} />
+                    </div>
+                    <div className="relative z-0">
+                        <HaibuContribution />
+                    </div>
                 </div>
             </article>
         </section>
