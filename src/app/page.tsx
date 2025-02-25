@@ -14,7 +14,6 @@ import SocialMediaSection from "@/sections/SocialMediaSection";
 import { fastFadeInRight, fastFadeInLeft, fadeInUp } from "@/animations/variants";
 import { InfiniteBeeAllFrames } from "@/components/landing-page/infinite-bee-all-frames"
 
-
 const notifications: Item[] = [
     {
         title: "Secure with Chopin",
@@ -54,7 +53,7 @@ export default function LandingPage() {
                 >
 
                     <motion.div 
-                        className="flex w-full md:w-[40%] flex-col justify-center items-center gap-5 mb-[10rem] ml-[4rem]"
+                        className="flex w-full md:w-[40%] flex-col justify-center items-center gap-5 mb-[10rem] ml-[4rem] relative"
                         variants={fastFadeInLeft}
                         initial="hidden"
                         animate="visible"
@@ -80,6 +79,9 @@ export default function LandingPage() {
                                 </ShimmerButton>
                             </Link>
                         </motion.div>
+                        <div className="absolute top-36 left-1/2 transform -translate-x-1/2 pointer-events-none">
+                            <InfiniteBeeAllFrames width={350} height={100} />
+                        </div>
                     </motion.div>
 
                     <motion.section 
@@ -99,15 +101,11 @@ export default function LandingPage() {
                     </motion.section>
                 </motion.section>
 
-                    <TokenSection />
-
-                    <ContributeSection />
-
-                    <ChopinSection />
-                    
-                    <SocialMediaSection />
-
-                    <CommunitySection />
+                <TokenSection />
+                <ContributeSection />
+                <ChopinSection />
+                <SocialMediaSection />
+                <CommunitySection />
             </main>
         </>
     );
