@@ -13,6 +13,7 @@ import ChopinSection from "@/sections/ChopinFramework";
 import SocialMediaSection from "@/sections/SocialMediaSection";
 import { fastFadeInRight, fastFadeInLeft, fadeInUp } from "@/animations/variants";
 import { InfiniteBeeAllFrames } from "@/components/landing-page/infinite-bee-all-frames"
+import HaibuSection from "@/sections/HaibuSection";
 
 const notifications: Item[] = [
     {
@@ -45,13 +46,11 @@ export default function LandingPage() {
     return (
         <>
             <main className="flex flex-col justify-center items-center min-h-screen">
-
                 <motion.section 
                     className="flex flex-col md:flex-row items-center justify-center w-full text-center md:text-left gap-5"
                     initial="hidden"
                     animate="visible"
                 >
-
                     <motion.div 
                         className="flex w-full md:w-[40%] flex-col justify-center items-center gap-5 mb-[10rem] ml-[4rem] relative"
                         variants={fastFadeInLeft}
@@ -101,6 +100,7 @@ export default function LandingPage() {
                     </motion.section>
                 </motion.section>
 
+                <HaibuSection />
                 <TokenSection />
                 <ContributeSection />
                 <ChopinSection />
