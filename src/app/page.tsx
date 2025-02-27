@@ -105,7 +105,6 @@ export default function LandingPage() {
                 <ContributeSection />
                 <ChopinSection />
                 <SocialMediaSection />
-                <CommunitySection />
             </main>
         </>
     );

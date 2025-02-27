@@ -113,30 +113,18 @@ export default function HaibuSection() {
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
             >
-                <div className="max-w-[50rem] mx-auto z-50">
+                <div className="max-w-[50rem] mt-16 mx-auto z-50">
                     <motion.h2 
-                        className="text-black text-6xl text-center font-semibold mb-10"
+                        className="text-black text-4xl text-center font-semibold mb-10"
                         variants={fadeInUp}
                     >
-                        <span className="shadow-lg">What is <span className="text-haibu-purple">Haibu</span>?</span>
+                        <span className="">What is <span className="text-haibu-purple">Haibu</span>?</span>
                     </motion.h2>
                     <motion.p 
-                        className="text-black text-3xl mt-2 text-center max-w-[50rem] mx-auto font-semibold"
+                        className="text-black text-2xl mt-2 text-center max-w-[50rem] mx-auto font-semibold"
                         variants={fadeInUp}
                     >
-                        <span className="shadow-lg">Haibu is a <span className="shadow-lg font-bold text-haibu-purple">secure</span>, <span className="shadow-lg font-bold text-haibu-purple">decentralized</span>, and <span className="shadow-lg font-bold text-haibu-purple">user-governed</span> social media platform.</span>
-                    </motion.p>
-                    <motion.h3 
-                        className="text-haibu-purple text-2xl text-center font-bold mt-4"
-                        variants={fadeInUp}
-                    >
-                        <span className="shadow-lg">Our Mission</span>
-                    </motion.h3>
-                    <motion.p 
-                        className="text-black text-xl font-bold mt-2 text-center max-w-[45rem] mx-auto "
-                        variants={fadeInUp}
-                    >
-                        <span className="shadow-lg">We empower users by prioritizing <span className="font-bold shadow-lg text-haibu-purple">privacy</span>, <span className="shadow-lg font-bold text-haibu-purple">security</span>, and community <span className="shadow-lg font-bold text-haibu-purple">governance</span>, ensuring a future where social media is free from centralized control.</span>
+                        <span className="">It is a <span className=" font-bold text-haibu-purple">secure</span>, <span className=" font-bold text-haibu-purple">decentralized</span>, and <span className="font-bold text-haibu-purple">user-governed</span> social media platform where people can share their thoughts, ideas, and experiences through posts, comments, and interactions.</span>
                     </motion.p>
                 </div>
 
@@ -192,15 +180,15 @@ export default function HaibuSection() {
             </motion.div>
             
             <motion.div 
-                className="mt-10 z-30 flex items-center justify-center"
+                className="mt-48 z-30 flex items-center justify-center"
                 variants={fadeInUp}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
             >
-                <span className="text-black text-5xl font-bold shadow-lg">Haibu is </span>&nbsp;
+                <span className="text-black text-3xl font-bold shadow-lg">Haibu is </span>&nbsp;
                 <RotatingText
-                    texts={['Decentralized', 'Secure', 'Private', 'Governance', 'Social', 'Community', 'Freedom', 'The Future']}
-                    mainClassName="px-2 sm:px-2 md:px-3 bg-haibu-purple shadow-lg text-5xl text-white font-bold overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                    texts={['Decentralized', 'Secure', 'Open Source', 'Social', 'Community', 'The Future']}
+                    mainClassName="px-2 sm:px-2 md:px-3 bg-haibu-purple shadow-lg text-3xl text-white font-bold overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
                     staggerFrom={"first"}
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
