@@ -51,7 +51,7 @@ interface InfiniteBeeAllFramesProps {
 }
 
 export function InfiniteBeeAllFrames({ width, height, className }: InfiniteBeeAllFramesProps) {
-  const [frameIndex, setFrameIndex] = useState(0);
+  const [frameIndex, setFrameIndex] = useState(Math.floor(Math.random() * frames.length));
 
   useEffect(() => {
     const interval = setInterval(() => {
