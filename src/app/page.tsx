@@ -8,7 +8,6 @@ import { Item } from "@/types";
 import NotificationCard from "@/components/landing-page/NotificationCard";
 import TokenSection from "@/sections/TokenSection";
 import ContributeSection from "@/sections/ContributeSection";
-import CommunitySection from "@/sections/CommunitySection";
 import ChopinSection from "@/sections/ChopinFramework";
 import SocialMediaSection from "@/sections/SocialMediaSection";
 import { fastFadeInRight, fastFadeInLeft, fadeInUp } from "@/animations/variants";
@@ -46,12 +45,13 @@ export default function LandingPage() {
     return (
         <>
             <main className="flex flex-col justify-center items-center min-h-screen">
-                <motion.section 
+                <motion.section
                     className="flex flex-col md:flex-row items-center justify-center w-full text-center md:text-left gap-5"
                     initial="hidden"
                     animate="visible"
                 >
-                    <motion.div 
+                    <motion.div
+                        id="home"
                         className="flex w-full md:w-[40%] flex-col justify-center items-center gap-5 mb-[10rem] ml-[4rem] relative"
                         variants={fastFadeInLeft}
                         initial="hidden"
@@ -63,7 +63,7 @@ export default function LandingPage() {
                             social media: <strong className="text-haibu-purple">secure</strong>,
                             <strong className="text-haibu-purple"> decentralized</strong>, and <strong className="text-haibu-purple">user-governed</strong>!
                         </h1>
-                        
+
                         <motion.div
                             variants={fadeInUp}
                             initial="hidden"
@@ -83,7 +83,7 @@ export default function LandingPage() {
                         </div>
                     </motion.div>
 
-                    <motion.section 
+                    <motion.section
                         className="flex w-full md:w-[40%] justify-center"
                         variants={fastFadeInRight}
                         initial="hidden"

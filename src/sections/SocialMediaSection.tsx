@@ -18,15 +18,7 @@ import tree from '@/components/assets/card-haibu/TreeWithColmena.png';
 
 const clouds = [cloud1, cloud2, cloud3, cloud4, cloud5, cloud6, cloud7, cloud8, cloud9, cloud10];
 
-const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.2
-        }
-    }
-};
+
 
 function getRandomCloud() {
     return clouds[Math.floor(Math.random() * clouds.length)];
@@ -75,7 +67,7 @@ export default function SocialMediaSection() {
 
 
     return (
-        <section ref={ref} className="relative flex flex-col items-center p-8 mt-40 w-full h-auto min-h-[700px] bg-white shadow-xl rounded-lg overflow-hidden">
+        <section id="socialmedia" ref={ref} className="relative flex flex-col items-center p-8 mt-40 w-full h-auto min-h-[700px] bg-white shadow-xl rounded-lg overflow-hidden">
             <motion.h2 
                 className="absolute text-haibu-purple text-2xl text-center mt-40 font-semibold z-20"
                 variants={fadeInUp}
@@ -191,7 +183,7 @@ export default function SocialMediaSection() {
                 className="absolute bottom-20 right-1 w-1/6 h-auto object-cover z-10" 
             />
 
-            <div className="absolute z-10 bottom-50 mt-80 left-0 w-full h-full">
+            <div className="absolute z-10 bottom-50 mt-[26rem] left-0 w-full h-full">
                 <motion.div variants={fadeInUp}>
                     <InfiniteBeeAllFrames width={120} height={100} className="absolute top-20 left-3/4" />
                 </motion.div>

@@ -5,7 +5,7 @@ import { fastFadeInLeft, fastFadeInRight } from "@/animations/variants";
 
 export default function ChopinSection() {
     return (
-        <section className="flex flex-col gap-8 items-center p-4 md:p-[6rem]">
+        <section id="chopin" className="flex flex-col gap-8 items-center p-4 md:p-[6rem]">
             <h2 className="text-2xl md:text-3xl text-center font-medium text-strong-blue" id="chopinFramework">
                 Why does <strong className="text-light-yellow">Haibu</strong> use{" "}
                 <strong className="text-haibu-purple">Chopin Framework</strong>?

@@ -6,15 +6,14 @@ import Image from "next/image";
 import HaibuLogo from "../../../public/haibu-logos/haibu1.svg";
 import { NavItem } from "@/types/landing-page/navbar";
 
-
 const navItems: NavItem[] = [
-    { title: "Home", url: "/#modules" },
-    { title: "Features", url: "/#opinions" },
-    { title: "Events", url: "/#events" },
-    { title: "Documentation", url: "/#docs" },
+    { title: "Home", url: "/#home" },
+    { title: "Features", url: "/#features" },
+    { title: "Chopin Framework", url: "/#chopin" },
+    { title: "Social Media", url: "/#socialmedia" },
 ];
 
-const sections = ["modules", "opinions", "functionalities", "contact"];
+const sections = ["home", "features", "chopin", "socialmedia"];
 
 const LandingNavbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -42,6 +41,13 @@ const LandingNavbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const handleScrollToSection = (id: string) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    };
+
     return (
         <div className={`fixed top-0 z-30 w-full mx-auto transition-all duration-300 px-4 ${isScrolled ? "mt-2" : "md:mt-0 mt-0"}`}>
             <nav
@@ -64,14 +70,17 @@ const LandingNavbar = () => {
                 <ul className={`my-auto hidden md:flex space-x-4 transition-all duration-300 ${isScrolled ? "text-[17.5px]" : "text-lg"}`}>
                     {navItems.map(({ title, url }) => (
                         <li key={title}>
-                            <Link
+                            <button
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    handleScrollToSection(url.slice(2));
+                                }}
                                 className={`relative hover:text-haibu-purple block px-2 py-2 transition-colors duration-300 ${
-                                    activeSection === url.slice(1) ? "text-haibu-purple" : "text-gray-600"
+                                    activeSection === url.slice(2) ? "text-haibu-purple" : "text-gray-600"
                                 }`}
-                                href={url}
                             >
                                 {title}
-                            </Link>
+                            </button>
                         </li>
                     ))}
                 </ul>
@@ -92,15 +101,18 @@ const LandingNavbar = () => {
                     <ul className="flex flex-col space-y-2 px-4 py-4">
                         {navItems.map(({ title, url }) => (
                             <li key={title}>
-                                <Link
+                                <button
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        handleScrollToSection(url.slice(2));
+                                        setIsMenuOpen(false);
+                                    }}
                                     className={`block hover:text-blue-500 px-2 py-2 transition-colors duration-300 ${
-                                        activeSection === url.slice(1) ? "text-blue-500" : "text-gray-600"
+                                        activeSection === url.slice(2) ? "text-blue-500" : "text-gray-600"
                                     }`}
-                                    href={url}
-                                    onClick={() => setIsMenuOpen(false)}
                                 >
                                     {title}
-                                </Link>
+                                </button>
                             </li>
                         ))}
                     </ul>

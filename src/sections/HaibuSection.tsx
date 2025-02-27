@@ -73,7 +73,7 @@ export default function HaibuSection() {
     }, []);
 
     return (
-        <section ref={ref} className="relative flex flex-col items-center p-8 mt-40 w-full h-auto min-h-[700px] bg-white shadow-xl rounded-lg overflow-hidden">
+        <section id="features"  ref={ref} className="relative flex flex-col items-center p-8 mt-40 w-full h-auto min-h-[700px] bg-white rounded-lg overflow-hidden">
             <div className="absolute top-1 left-0 w-full h-full z-5 pointer-events-none">
                 {cloudsArray.map((cloud) => (
                     <div
@@ -185,7 +185,7 @@ export default function HaibuSection() {
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
             >
-                <span className="text-black text-3xl font-bold shadow-lg">Haibu is </span>&nbsp;
+                <span className="text-black text-3xl font-bold">Haibu is </span>&nbsp;
                 <RotatingText
                     texts={['Decentralized', 'Secure', 'Open Source', 'Social', 'Community', 'The Future']}
                     mainClassName="px-2 sm:px-2 md:px-3 bg-haibu-purple shadow-lg text-3xl text-white font-bold overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
