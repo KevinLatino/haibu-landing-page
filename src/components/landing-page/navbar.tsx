@@ -49,7 +49,7 @@ const LandingNavbar = () => {
     };
 
     return (
-        <div className={`fixed top-0 z-30 w-full mx-auto transition-all duration-300 px-4 ${isScrolled ? "mt-2" : "md:mt-0 mt-0"}`}>
+        <div className={`fixed top-0 z-40 w-full mx-auto transition-all duration-300 px-4 ${isScrolled ? "mt-2" : "md:mt-0 mt-0"}`}>
             <nav
                 className={`flex items-center justify-between transition-[max-width] duration-500 px-[2.3rem] mx-auto ${
                     isScrolled ? "py-2" : "py-4"
