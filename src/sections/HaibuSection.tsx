@@ -37,7 +37,7 @@ function getRandomHeight() {
 }
 
 function getRandomInterval() {
-    return Math.floor(Math.random() * 4500);
+    return Math.floor(Math.random() * 4500) + 5000;
 }
 
 export default function HaibuSection() {
